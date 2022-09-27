@@ -1,0 +1,63 @@
+header {
+  background-color: rgb(77, 37, 37);
+  padding: 2em;
+
+}
+
+nav a{
+  color: white;
+  font-size: larger;
+  margin-right: 1em;
+}
+
+h1{
+  background-color: white;
+  color:rgb(77, 37, 37);
+  margin-bottom: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+
+}
+
+.post h2{
+  margin-left:-.3em;
+}
+
+
+header, .post:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+.post-content {
+  color: #056605;
+  font-weight: bold;
+  font-size: x-large;
+  margin-left: -5px;
+}
+
+.post-list {
+  border: 2px solid green;
+  padding-top: 1em;
+}
+
+.post-list .col-md-8{
+  text-align: left;
+  margin-left:1em;
+}

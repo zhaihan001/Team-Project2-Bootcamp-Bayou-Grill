@@ -1,0 +1,33 @@
+[
+    {
+        "comment": "Comment 1",
+        "post_id": 1
+    },
+
+    {
+        "comment": "Comment 2",
+        "post_id": 2
+    },
+
+    {
+        "comment": "Comment 3",
+        "post_id": 3
+    },
+    {
+        "comment": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "post_id": 1
+    },
+    {
+        "comment": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "post_id": 1
+    },
+    {
+        "comment": "ccccccccccccccccccccccccccccccccccccccccc",
+        "post_id": 1
+    },
+    {
+        "comment": "ddddddddddddddddddddddddddddddddddddddddddddd",
+        "post_id": 1
+    }
+]
+  

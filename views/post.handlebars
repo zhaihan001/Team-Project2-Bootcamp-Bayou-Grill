@@ -1,0 +1,31 @@
+<div class="text-center">
+  <h2>{{title}}</h2>
+  <p>{{content}}</p>
+  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <p><strong>Comments:</strong></p>
+
+  {{#if comments.length}}
+  {{#each comments as |comment|}}
+  <div class="post-list">
+    <div class="row mb-2">
+      <div class="comment col-md-8">
+        <p>{{comment.comment}}</p>
+        <p>Created by {{comment.user.name}} on {{format_date comment.date_created}}</p>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+  {{/if}}
+
+  <form class="form add-comment-form">
+    <div class="form-group">
+      <label for="post-comment">Add Comment here:</label>
+      <textarea class="form-input" id="post-comment" name="post-comment"></textarea>
+    </div>
+    <p>
+      <button type="submit" class="btn btn-primary">Leave a comment</button>
+    </p>
+  </form>
+</div>
+
+<script src="../js/comment.js"></script>
