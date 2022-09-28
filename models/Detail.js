@@ -14,7 +14,7 @@ Detail.init(
     order_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "order",
+        model: "purchase",
         key: "id",
       },
     },

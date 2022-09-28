@@ -27,6 +27,7 @@ Food.init(
     },
     isSpicy: {
       type: DataTypes.BOOLEAN,
+
       allowNull: false,
     },
     price: {

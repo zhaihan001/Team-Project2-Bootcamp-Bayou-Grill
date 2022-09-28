@@ -16,9 +16,9 @@
         Tech Blog
       </h1>
       <nav>
-        <a href="../">Home</a> |
-        <a href="../dashboard">Dashboard</a> |
-        <!-- Conditionally render login or logout links -->
+        <a href="/">Menu</a> |
+        <a href="/dashboard">Dashboard</a> |
+
         {{#if logged_in}}
         <button class="no-button" id="logout">logout</button>
         {{else}}
@@ -28,12 +28,12 @@
     </header>
 
     <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
+
       {{{ body }}}
     </main>
   </div>
 
-  <!-- Render script for logged in users only -->
+
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}

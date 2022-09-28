@@ -1,0 +1,122 @@
+[
+    {
+      "name": "King Neptune Salad",
+      "category_id": 1,
+      "description": "fresh crab and shrimp on a bed of crispy greens",
+      "isSpicy": "false",
+      "price":16
+    },
+    {
+        "name": "Fresh Fruit Salad",
+        "category_id": 1,
+        "description": "melon, pineapple, berries",
+        "isSpicy": "false",
+        "price":12
+    },
+    {
+        "name": "Grilled Bruschetta",
+        "category_id": 1,
+        "description": "with roasted garlic, sausage",
+        "isSpicy": "false",
+        "price":12
+    },
+    {
+        "name": "Steamed Mussels",
+        "category_id": 1,
+        "description": "Thai style",
+        "isSpicy": "true",
+        "price":18
+    },
+    {
+        "name": "Filet Mignon",
+        "category_id": 2,
+        "description": "8 ounce, with Spinach Salad",
+        "isSpicy": "false",
+        "price":24
+    },
+    {
+        "name": "Porterhouse for Two",
+        "category_id": 2,
+        "description": "with Caprese Salad",
+        "isSpicy": "false",
+        "price":36
+    },
+    {
+        "name": "Classic New York Sirloin",
+        "category_id": 2,
+        "description": "with Jumbo Gulf Shrimp with garlic",
+        "isSpicy": "false",
+        "price":28
+    },
+    {
+        "name": "Stuffed Lobster Tail",
+        "category_id": 2,
+        "description": "with lump crabmeat and topped with imperial sauce",
+        "isSpicy": "false",
+        "price":25
+    },
+    {
+        "name": "Jambalaya",
+        "category_id": 2,
+        "description": "with spicy Shrimp and sausage",
+        "isSpicy": "true",
+        "price":24
+    },
+    {
+        "name": "Shrimp Creole",
+        "category_id": 2,
+        "description": "hot pepper sauce and cayenne based seasoning",
+        "isSpicy": "true",
+        "price":22
+    },
+    {
+        "name": "Spicy Eggplant Pasta",
+        "category_id": 2,
+        "isSpicy": "true",
+        "price":18
+    },
+    {
+        "name": "HandCut Fries",
+        "category_id": 3,
+        "isSpicy": "false",
+        "price":4
+    },
+    {
+        "name": "Baby Brussels Sprouts",
+        "category_id": 3,
+        "isSpicy": "false",
+        "price":6
+    },
+    {
+        "name": "Mashed Potatoes",
+        "category_id": 3,
+        "isSpicy": "false",
+        "price":4
+    },
+    {
+        "name": "Fresh Onion Soup",
+        "category_id": 3,
+        "isSpicy": "false",
+        "price":5
+    },
+    {
+        "name": "Soda",
+        "category_id": 4,
+        "isSpicy": "false",
+        "price":3
+    },
+    {
+        "name": "Wine",
+        "category_id": 4,
+        "isSpicy": "false",
+        "price":8
+    },
+    {
+        "name": "Cocktail",
+        "category_id": 4,
+        "isSpicy": "false",
+        "price":8
+    }
+
+]
+  

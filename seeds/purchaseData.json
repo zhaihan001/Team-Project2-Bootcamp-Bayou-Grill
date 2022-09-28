@@ -1,0 +1,18 @@
+[
+    {
+      "customer_id": 2,
+      "itemCount": 5,
+      "totalCost": 100
+    },
+    {
+        "customer_id": 3,
+        "itemCount": 3,
+        "totalCost": 55
+    },
+    {
+        "customer_id": 1,
+        "itemCount": 2,
+        "totalCost": 29
+    }
+]
+  

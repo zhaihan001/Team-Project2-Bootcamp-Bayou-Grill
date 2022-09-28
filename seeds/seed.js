@@ -1,31 +1,39 @@
 const sequelize = require("../config/connection");
-const { User, Post, Comment } = require("../models");
+const { Customer, Category, Food, Purchase, Detail } = require("../models");
 
-const userData = require("./userData.json");
-const postData = require("./postData.json");
-const commentData = require("./commentData.json");
+const customerData = require("./customerData.json");
+const categoryData = require("./categoryData.json");
+const foodData = require("./foodData.json");
+const purchaseData = require("./purchaseData.json");
+const detailData = require("./detailData.json");
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
+  await Customer.bulkCreate(customerData, {
     individualHooks: true,
     returning: true,
   });
 
-  for (const post of postData) {
-    await Post.create({
-      ...post,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  await Category.bulkCreate(categoryData, {
+    individualHooks: true,
+    returning: true,
+  });
 
-  for (const comment of commentData) {
-    await Comment.create({
-      ...comment,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  await Food.bulkCreate(foodData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  await Purchase.bulkCreate(purchaseData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  await Detail.bulkCreate(detailData, {
+    individualHooks: true,
+    returning: true,
+  });
 
   process.exit(0);
 };

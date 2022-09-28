@@ -1,0 +1,43 @@
+[
+    {
+      "order_id": 3,
+      "food_id": 1
+    },
+    {
+        "order_id": 3,
+        "food_id": 4
+    },
+    {
+        "order_id": 3,
+        "food_id": 6
+    },
+    {
+        "order_id": 3,
+        "food_id": 9
+    },
+    {
+        "order_id": 3,
+        "food_id": 13
+    },
+    {
+        "order_id": 1,
+        "food_id": 7
+    },
+    {
+        "order_id": 1,
+        "food_id": 10
+    },
+    {
+        "order_id": 1,
+        "food_id": 15
+    },
+    {
+        "order_id": 2,
+        "food_id": 8
+    },
+    {
+        "order_id": 2,
+        "food_id": 14
+    }
+]
+  

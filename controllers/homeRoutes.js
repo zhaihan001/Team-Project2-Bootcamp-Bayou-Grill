@@ -1,25 +1,27 @@
 const router = require("express").Router();
-const { Post, User, Comment } = require("../models");
+const { Customer, Category, Food, Purchase, Detail } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
     // Get all posts and JOIN with user data
-    const postData = await Post.findAll({
+    const purchaseData = await Purchase.findAll({
       include: [
         {
-          model: User,
+          model: Customer,
           attributes: ["name"],
         },
       ],
     });
 
     // Serialize data so the template can read it
-    const posts = postData.map((post) => post.get({ plain: true }));
+    const purchase = purchaseData.map((purchase) =>
+      purchase.get({ plain: true })
+    );
 
     // Pass serialized data and session flag into template
     res.render("homepage", {
-      posts,
+      purchase,
       logged_in: req.session.logged_in,
     });
   } catch (err) {

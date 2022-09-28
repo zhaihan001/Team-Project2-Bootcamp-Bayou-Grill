@@ -1,15 +1,15 @@
 const Customer = require("./Customer");
 const Category = require("./Category");
 const Food = require("./Food");
-const Order = require("./Order");
+const Purchase = require("./Purchase");
 const Detail = require("./Detail");
 
-Customer.hasMany(Order, {
+Customer.hasMany(Purchase, {
   foreignKey: "customer_id",
   onDelete: "CASCADE",
 });
 
-Order.belongsTo(Customer, {
+Purchase.belongsTo(Customer, {
   foreignKey: "customer_id",
 });
 
@@ -31,13 +31,13 @@ Detail.belongsTo(Food, {
   foreignKey: "food_id",
 });
 
-Order.hasMany(Detail, {
+Purchase.hasMany(Detail, {
   foreignKey: "order_id",
   onDelete: "CASCADE",
 });
 
-Detail.belongsTo(Order, {
+Detail.belongsTo(Purchase, {
   foreignKey: "order_id",
 });
 
-module.exports = { Customer, Category, Food, Order, Detail };
+module.exports = { Customer, Category, Food, Purchase, Detail };
