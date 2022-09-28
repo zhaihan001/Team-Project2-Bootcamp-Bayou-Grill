@@ -4,24 +4,25 @@ const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    // Get all posts and JOIN with user data
-    const purchaseData = await Purchase.findAll({
+    // Get all menuInfo
+    const menuData = await Food.findAll({
       include: [
         {
-          model: Customer,
+          model: Category,
           attributes: ["name"],
         },
       ],
     });
 
     // Serialize data so the template can read it
-    const purchase = purchaseData.map((purchase) =>
-      purchase.get({ plain: true })
+    const menuItems = menuData.map((menuItems) =>
+      menuItems.get({ plain: true })
     );
+    console.log(menuItems);
 
     // Pass serialized data and session flag into template
     res.render("homepage", {
-      purchase,
+      menuItems,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
