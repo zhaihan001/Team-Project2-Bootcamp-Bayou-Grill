@@ -28,6 +28,20 @@
         "price":18
     },
     {
+        "name": "Spinach Artichoke Dip",
+        "category_id": 1,
+        "description": "smooth and creamy garlic-herb cheese",
+        "isSpicy": "false",
+        "price":11
+    },
+    {
+        "name": "Sweet n Spicy Jalapeno Poppers",
+        "category_id": 1,
+        "description": "bacon strips warpped jalapeno filled with cream cheese",
+        "isSpicy": "true",
+        "price":13
+    },
+    {
         "name": "Filet Mignon",
         "category_id": 2,
         "description": "8 ounce, with Spinach Salad",

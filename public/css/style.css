@@ -1,31 +1,55 @@
-header {
-  background-color: rgb(77, 37, 37);
-  padding: 2em;
+html{
+  background: url("/image/menubackground.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position-y: 7em;
+}
 
+body{
+  color:rgba(245, 245, 245, 0.808);
+}
+header {
+  background-color: rgb(42, 19, 19);
+  padding: 2em;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 nav a{
-  color: white;
+  color:whitesmoke;
   font-size: larger;
   margin-right: 1em;
 }
 
 h1{
-  background-color: white;
-  color:rgb(77, 37, 37);
-  margin-bottom: 1em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  margin-left: 4em;
+  justify-content: center;
 
 }
-
-.post h2{
-  margin-left:-.3em;
+.container{
+  margin-right:18em;
+}
+h2{
+  /* background-color: rgb(250, 207, 67, 0.5); */
+  background-color: black;
+  color:rgb(227, 225, 225);
+  border: 3px;
+  border-radius: 20%;
+  padding: 5px;
+  display: table;
 }
 
-
-header, .post:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+p{
+  font-size: medium;
+}
+input{
+  width: 18px;
+  height: 18px;
+  background-color: lightgrey;
+  margin-left: 1em;
 }
 
 

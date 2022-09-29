@@ -16,8 +16,8 @@
         Diner
       </h1>
       <nav>
-        <a href="/">Menu</a> |
-        <a href="/dashboard">Orders</a> |
+        <a href="/">Menu</a>
+        <a href="/dashboard">Order History</a>
 
         {{#if logged_in}}
         <button class="no-button" id="logout">logout</button>
@@ -32,8 +32,6 @@
       {{{ body }}}
     </main>
   </div>
-
-
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}

@@ -19,7 +19,7 @@ Purchase.init(
       },
     },
     itemCount: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     totalCost: {
