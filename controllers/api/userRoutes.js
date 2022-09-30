@@ -4,11 +4,9 @@ const { Customer } = require("../../models");
 router.post("/", async (req, res) => {
   try {
     const userData = await Customer.create(req.body);
-
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-
       res.status(200).json(userData);
     });
   } catch (err) {
@@ -21,28 +19,21 @@ router.post("/login", async (req, res) => {
     const userData = await Customer.findOne({
       where: { email: req.body.email },
     });
-
     if (!userData) {
-      res
-        .status(400)
-        .json({
-          message:
-            "We are unable to find an account associate with this email, please try again",
-        });
+      res.status(400).json({
+        message:
+          "We are unable to find an account associate with this email, please try again",
+      });
       return;
     }
-
     const validPassword = userData.checkPassword(req.body.password);
-
     if (!validPassword) {
       res.status(400).json({ message: "Incorrect password, please try again" });
       return;
     }
-
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-
       res.json({ user: userData, message: "You are now logged in!" });
     });
   } catch (err) {

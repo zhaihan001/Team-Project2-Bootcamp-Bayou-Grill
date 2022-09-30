@@ -1,0 +1,67 @@
+<div class="row mb-4 post">
+    <div class="col-md-5">
+        <h2>
+            APPETIZERS
+        </h2><br>
+        {{#each menuItems as |menuItem| }}
+        {{#ifEquals category_id 1}}
+        <h5>
+            {{name}}{{#if isSpicy}}🌶️{{/if}}
+            ----- ${{price}}
+            <input type="checkbox" id={{id}} name="{{name}}" value={{price}}>
+        </h5>
+        <p>{{description}}</p><br>
+        {{/ifEquals}}
+        {{/each}}
+    </div>
+
+    <div class="col-md-5">
+        <h2>
+            ENTREES
+        </h2><br>
+        {{#each menuItems as |menuItem| }}
+        {{#ifEquals category_id 2}}
+        <h5>
+            {{name}}{{#if isSpicy}}🌶️{{/if}}
+            ----- ${{price}}
+            <input type="checkbox" id={{id}} name="{{name}}" value={{price}}>
+        </h5>
+        <p>{{description}}</p><br>
+        {{/ifEquals}}
+        {{/each}}
+    </div>
+
+    <div class="col-md-5">
+        <h2>
+            SIDES
+        </h2><br>
+        {{#each menuItems as |menuItem| }}
+        {{#ifEquals category_id 3}}
+        <h5>
+            {{name}}{{#if isSpicy}}🌶️{{/if}}
+            ----- ${{price}}
+            <input type="checkbox" id={{id}} name="{{name}}" value={{price}}>
+        </h5>
+        <p>{{description}}</p><br>
+        {{/ifEquals}}
+        {{/each}}
+    </div>
+
+    <div class="col-md-5">
+        <h2>
+            BEVERAGES
+        </h2><br>
+        {{#each menuItems as |menuItem| }}
+        {{#ifEquals category_id 4}}
+        <h5>
+            {{name}}{{#if isSpicy}}🌶️{{/if}}
+            ----- ${{price}}
+            <input type="checkbox" id={{id}} name="{{name}}" value={{price}}>
+        </h5>
+        <p>{{description}}</p><br>
+        {{/ifEquals}}
+        {{/each}}
+    </div>
+    <button type="submit" class="btn btn-light col-md-3" id="submitOrder">Submit Order</button>
+</div>
+<script src="./js/neworder.js"></script>
