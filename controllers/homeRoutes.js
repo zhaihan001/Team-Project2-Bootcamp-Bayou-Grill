@@ -27,6 +27,31 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/neworder", withAuth, async (req, res) => {
+  try {
+    // Get all menuInfo
+    const menuData = await Food.findAll({
+      include: [
+        {
+          model: Category,
+          attributes: ["name"],
+        },
+      ],
+    });
+    // Serialize data so the template can read it
+    const menuItems = menuData.map((menuItems) =>
+      menuItems.get({ plain: true })
+    );
+    // Pass serialized data and session flag into template
+    res.render("neworder", {
+      menuItems,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get("/post/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {

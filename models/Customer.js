@@ -28,6 +28,11 @@ Customer.init(
         isEmail: true,
       },
     },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      isNumeric: true,
+    },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
