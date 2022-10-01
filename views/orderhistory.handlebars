@@ -4,8 +4,6 @@
       <h3>Your Order History:</h3>
       <h5>click any link below to view your order detail</h5>
       {{#each orderList as |item|}}
-
-
       <li>
         <a href="/orderhistory/detail/{{id}}">
           Name: {{customer.name}}<br>
@@ -14,8 +12,6 @@
           Order date: {{format_date date_created}}
         </a>
       </li>
-
-
       {{/each}}
     </ol>
   </div>

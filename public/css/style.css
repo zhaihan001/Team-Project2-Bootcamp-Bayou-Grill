@@ -34,6 +34,7 @@ h1 {
 }
 
 .container {
+  margin-left: 2em;
   margin-right: 18em;
 }
 
@@ -50,8 +51,6 @@ h2 {
 p {
   font-size: medium;
 }
-
-
 
 input {
   width: 18px;
@@ -80,6 +79,12 @@ ul {
   margin-top: 1em;
 }
 
+#login{
+  float: left;
+}
+#signup{
+  float: right;
+}
 
 .no-button {
   background: none;
@@ -110,7 +115,6 @@ ul {
 
 .post-list .col-md-8 {
   text-align: left;
-
   margin-left:1em;
 }
 
@@ -141,28 +145,19 @@ ul {
   }
   main{
     background-size:contain;
-=======
-  margin-left: 1em;
+    margin-left: 1em;
 }
-
-.login {
-  float: right;
-
 }
-
-.signup {
-  float: left;
-}
-
-
 
 .glow-on-hover {
-  width: 220px;
+  font-size: large;
+  width: 150px;
   height: 50px;
   border: none;
   outline: none;
   color: #fff;
   background: #111;
+  margin-top: 1em;
   cursor: pointer;
   position: relative;
   z-index: 0;
