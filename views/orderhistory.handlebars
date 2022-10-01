@@ -2,7 +2,8 @@
   <div class="col-md-6">
     <ol>
       <h3>Your Order History:</h3>
-      <h5>click any link below to view your order detail</h5>
+      <h5>click any link below to view your order detail</h5><br>
+      {{#if orderList}}
       {{#each orderList as |item|}}
       <li>
         <a href="/orderhistory/detail/{{id}}">
@@ -13,6 +14,9 @@
         </a>
       </li>
       {{/each}}
+      {{else}}
+      <h4>You have not placed any orders</h4>
+      {{/if}}
     </ol>
   </div>
 </div>
