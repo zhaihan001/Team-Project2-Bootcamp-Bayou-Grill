@@ -51,6 +51,8 @@ p {
   font-size: medium;
 }
 
+
+
 input {
   width: 18px;
   height: 18px;
@@ -58,6 +60,25 @@ input {
   margin-left: 1em;
 }
 
+li{
+  font-size: x-large;
+  margin-top: 1em;
+}
+
+li a{
+  color:whitesmoke;
+  text-decoration: underline;
+}
+
+li a:hover{
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  font-size: x-large;
+  margin-top: 1em;
+}
 
 
 .no-button {
@@ -89,6 +110,38 @@ input {
 
 .post-list .col-md-8 {
   text-align: left;
+
+  margin-left:1em;
+}
+
+@media screen and (max-width: 576px) {
+  header.display-flex{
+    flex-direction: column;
+    justify-content: center!important;
+    align-items: center!important;
+    width:100%;
+  }
+  header h1{
+    margin: 0 auto 1em;
+  }
+  main {
+    background: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+    header.display-flex{
+    flex-direction: column;
+    justify-content: center!important;
+    align-items: center!important;
+    width:100%;
+  }
+  header h1{
+    margin: 0 auto 1em;
+  }
+  main{
+    background-size:contain;
+=======
   margin-left: 1em;
 }
 
