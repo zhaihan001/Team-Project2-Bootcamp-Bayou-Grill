@@ -29,7 +29,7 @@ router.get("/", async (req, res) => {
 
 router.get("/neworder", withAuth, async (req, res) => {
   try {
-    // Get all menuInfo
+    // fetch food table and include category name
     const menuData = await Food.findAll({
       include: [
         {
@@ -38,11 +38,10 @@ router.get("/neworder", withAuth, async (req, res) => {
         },
       ],
     });
-    // Serialize data so the template can read it
     const menuItems = menuData.map((menuItems) =>
       menuItems.get({ plain: true })
     );
-    // Pass serialized data and session flag into template
+
     res.render("neworder", {
       menuItems,
       logged_in: req.session.logged_in,
@@ -52,44 +51,52 @@ router.get("/neworder", withAuth, async (req, res) => {
   }
 });
 
-router.get("/post/:id", async (req, res) => {
+router.get("/orderhistory", withAuth, async (req, res) => {
   try {
-    const postData = await Post.findByPk(req.params.id, {
-      include: [{ model: User, attributes: ["name"] }],
+    // query purchase table against current user
+    const orderData = await Purchase.findAll({
+      where: { customer_id: req.session.user_id },
+      include: [
+        {
+          model: Customer,
+          attributes: ["name", "email", "phone"],
+        },
+      ],
     });
-
-    const post = postData.get({ plain: true });
-
-    const commentData = await Comment.findAll({
-      include: [{ model: User, attributes: ["name"] }],
-      where: { post_id: req.params.id },
-    });
-
-    const comments = commentData.map((comment) => comment.get({ plain: true }));
-    res.render("post", {
-      ...post,
-      comments,
-      logged_in: req.session.logged_in,
+    //store order info
+    const orderList = orderData.map((item) => item.get({ plain: true }));
+    res.render("orderhistory", {
+      orderList,
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-// Use withAuth middleware to prevent access to route
-router.get("/dashboard", withAuth, async (req, res) => {
+router.get("/orderhistory/detail/:id", async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ["password"] },
-      include: [{ model: Post }],
+    const detailData = await Detail.findAll({
+      include: [
+        { model: Food, attributes: ["name", "price"] },
+        { model: Purchase, attributes: ["totalCost", "date_created"] },
+      ],
+      where: { order_id: req.params.id },
     });
+    const orderDetail = detailData.map((item) => item.get({ plain: true }));
 
-    const user = userData.get({ plain: true });
+    const orderData = await Purchase.findAll({
+      where: { id: req.params.id },
+    });
+    //store order info
+    const orderPurchaseData = orderData.map((item) =>
+      item.get({ plain: true })
+    );
 
-    res.render("dashboard", {
-      ...user,
-      logged_in: true,
+    res.render("orderdetail", {
+      orderDetail,
+      orderPurchaseData,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);

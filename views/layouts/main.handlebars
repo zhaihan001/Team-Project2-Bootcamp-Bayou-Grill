@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Diner Online Ordering App</title>
+  <link rel="shortcut icon" href="#">
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -18,7 +19,7 @@
       <nav>
         <a href="/">Menu</a>
         <a href="/neworder">New Order</a>
-        <a href="/dashboard">Order History</a>
+        <a href="/orderhistory">Order History</a>
 
         {{#if logged_in}}
         <button class="no-button" id="logout">logout</button>
@@ -28,7 +29,7 @@
       </nav>
     </header>
 
-    <main class="container container-fluid mt-5">
+    <main class="container p-3 container-fluid mt-5">
 
       {{{ body }}}
     </main>
