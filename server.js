@@ -31,16 +31,6 @@ const sess = {
 
 app.use(session(sess));
 
-// pdf-exporter
-const fs = require("fs");
-const PDFExportor = require("pdf-export").default;
-const exporter = new PDFExportor({
-  host: "localhost",
-  port: 9333,
-  chromeBin: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-  timeout: 5000,
-});
-
 // Inform Express.js on which template engine to use
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
