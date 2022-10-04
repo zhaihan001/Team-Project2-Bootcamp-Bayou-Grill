@@ -19,17 +19,20 @@ header {
   position: sticky;
   top: 0;
   z-index: 999;
+  flex-direction: column;
+  justify-content: center!important;
+  align-items: center!important;
+  width:100%;
+}
+
+header h1{
+  margin: 0 auto 1em;
 }
 
 nav a {
   color: whitesmoke;
   font-size: larger;
   margin-right: 1em;
-}
-
-h1 {
-  margin-left: 4em;
-  justify-content: center;
 }
 
 .container {
@@ -101,6 +104,7 @@ ul {
 
 img {
   position: absolute;
+  height:auto;
   width: 80%;
   object-fit: contain;
   transform: translateX(-50%) translateY(-50%);
@@ -108,15 +112,6 @@ img {
 }
 
 @media screen and (max-width: 576px) {
-  header.display-flex{
-    flex-direction: column;
-    justify-content: center!important;
-    align-items: center!important;
-    width:100%;
-  }
-  header h1{
-    margin: 0 auto 1em;
-  }
   main {
     background: none;
   }
@@ -126,19 +121,10 @@ img {
 }
 
 @media screen and (max-width: 960px) {
-    header.display-flex{
-    flex-direction: column;
-    justify-content: center!important;
-    align-items: center!important;
-    width:100%;
-  }
-  header h1{
-    margin: 0 auto 1em;
-  }
   main{
     background-size:contain;
     margin-left: 1em;
-}
+  }
 }
 
 .glow-on-hover {
