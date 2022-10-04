@@ -55,3 +55,11 @@ https://safe-tor-27635.herokuapp.com/
 - Polished, responsive and interactive UI.
 
 - Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
+
+## Installation
+
+- run "npm install" in terminal
+- login to mysql and source the database
+- Exit mysql
+- run "nodemon start" to start the application
+- Navigate to "localhost:3001" to access the application
