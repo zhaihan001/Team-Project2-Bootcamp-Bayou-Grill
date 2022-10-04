@@ -30,7 +30,6 @@ nav a {
 h1 {
   margin-left: 4em;
   justify-content: center;
-
 }
 
 .container {
@@ -39,7 +38,6 @@ h1 {
 }
 
 h2 {
-  /* background-color: rgb(250, 207, 67, 0.5); */
   background-color: black;
   color: rgb(227, 225, 225);
   border: 3px;
@@ -101,21 +99,12 @@ ul {
   text-decoration: underline;
 }
 
-.post-content {
-  color: #056605;
-  font-weight: bold;
-  font-size: x-large;
-  margin-left: -5px;
-}
-
-.post-list {
-  border: 2px solid green;
-  padding-top: 1em;
-}
-
-.post-list .col-md-8 {
-  text-align: left;
-  margin-left:1em;
+img {
+  position: absolute;
+  width: 80%;
+  object-fit: contain;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
 }
 
 @media screen and (max-width: 576px) {
@@ -130,6 +119,9 @@ ul {
   }
   main {
     background: none;
+  }
+  img {
+  display: none;
   }
 }
 

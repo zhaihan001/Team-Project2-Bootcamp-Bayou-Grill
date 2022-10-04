@@ -1,3 +1,5 @@
 const backButtonHandler = () => document.location.replace("/orderhistory");
 
-document.querySelector(".back").addEventListener("click", backButtonHandler);
+document
+  .querySelector("#backButton")
+  .addEventListener("click", backButtonHandler);

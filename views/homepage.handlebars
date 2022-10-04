@@ -5,8 +5,8 @@
     </h2><br>
     {{#each menuItems as |menuItem| }}
     {{#ifEquals category_id 1}}
-    <img src="">
-    <h5 class="menuItem" data-image="/image/{{id}}.jpg">
+    <h5 class="menuItem" data-image="../image/{{name}}.jpg">
+      <img src="">
       {{name}}{{#if isSpicy}}🌶️{{/if}}
       ----- ${{price}}
     </h5>
@@ -21,7 +21,8 @@
     </h2><br>
     {{#each menuItems as |menuItem| }}
     {{#ifEquals category_id 2}}
-    <h5>
+    <h5 class="menuItem" data-image="../image/{{name}}.jpg">
+      <img src="">
       {{name}}{{#if isSpicy}}🌶️{{/if}}
       ----- ${{price}}
     </h5>
@@ -36,7 +37,8 @@
     </h2><br>
     {{#each menuItems as |menuItem| }}
     {{#ifEquals category_id 3}}
-    <h5>
+    <h5 class="menuItem" data-image="../image/{{name}}.jpg">
+      <img src="">
       {{name}}{{#if isSpicy}}🌶️{{/if}}
       ----- ${{price}}
     </h5>
@@ -51,7 +53,8 @@
     </h2><br>
     {{#each menuItems as |menuItem| }}
     {{#ifEquals category_id 4}}
-    <h5>
+    <h5 class="menuItem" data-image="../image/{{name}}.jpg">
+      <img src="">
       {{name}}{{#if isSpicy}}🌶️{{/if}}
       ----- ${{price}}
     </h5>
@@ -60,3 +63,4 @@
     {{/each}}
   </div>
 </div>
+<script src="./js/homepage.js"></script>
