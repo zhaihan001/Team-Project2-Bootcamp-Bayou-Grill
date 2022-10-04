@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "node server.js",
     "seed": "node seeds/seed.js",
-    "start": "npm-run-all --parallel server seed"
+    "start": "npm-run-all seed server"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +23,7 @@
     "nodemon": "^2.0.20",
     "npm-run-all": "^4.1.5",
     "pdf-export": "^1.4.1",
+    "run-my-sql-file": "^1.0.0",
     "sequelize": "^6.3.5",
     "validatorjs": "^3.22.1"
   }
