@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { Customer } = require("../../models");
+const signup = require("../../middleware/validation-middleware");
 
-router.post("/", async (req, res) => {
+router.post("/", signup, async (req, res) => {
   try {
     const userData = await Customer.create(req.body);
     req.session.save(() => {
@@ -21,14 +22,13 @@ router.post("/login", async (req, res) => {
     });
     if (!userData) {
       res.status(400).json({
-        message:
-          "We are unable to find an account associate with this email, please try again",
+        message: "We are unable to find an account associate with this email",
       });
       return;
     }
     const validPassword = userData.checkPassword(req.body.password);
     if (!validPassword) {
-      res.status(400).json({ message: "Incorrect password, please try again" });
+      res.status(400).json({ message: "Incorrect password" });
       return;
     }
     req.session.save(() => {
