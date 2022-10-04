@@ -54,7 +54,7 @@ p {
 input {
   width: 18px;
   height: 18px;
-  background-color: lightgrey;
+  background-color: rgb(211, 211, 211);
   margin-left: 1em;
 }
 
@@ -92,14 +92,6 @@ input {
   margin-left: 1em;
 }
 
-.login {
-  float: right;
-
-}
-
-.signup {
-  float: left;
-}
 
 
 
