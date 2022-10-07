@@ -53,7 +53,7 @@ router.get("/neworder", withAuth, async (req, res) => {
 
 router.get("/orderhistory", withAuth, async (req, res) => {
   try {
-    // query purchase table against current user
+    
     const orderData = await Purchase.findAll({
       where: { customer_id: req.session.user_id },
       include: [
@@ -63,7 +63,7 @@ router.get("/orderhistory", withAuth, async (req, res) => {
         },
       ],
     });
-    //store order info
+    
     const orderList = orderData.map((item) => item.get({ plain: true }));
     res.render("orderhistory", {
       orderList,
@@ -88,7 +88,7 @@ router.get("/orderhistory/detail/:id", async (req, res) => {
     const orderData = await Purchase.findAll({
       where: { id: req.params.id },
     });
-    //store order info
+    
     const orderPurchaseData = orderData.map((item) =>
       item.get({ plain: true })
     );
